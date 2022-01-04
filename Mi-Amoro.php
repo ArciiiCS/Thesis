@@ -21,7 +21,7 @@
 	</style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Welcome to Luxury Apartments Delft, About Us, Our Location, Handpicked to deliver a great stay, To do’s in Delft, Contact Us">
+    
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Mi Amoro</title>
@@ -56,8 +56,11 @@
       <img src="images/bg3.png" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="490" data-image-height="339">
       <div class="u-container-style u-group u-group-1">
         <div class="u-container-layout u-valign-middle-md u-container-layout-1">
-          <h1 class="u-text u-text-white u-title u-text-1">Mi Amoro&nbsp;</h1>
-          <p class="u-text u-text-body-alt-color u-text-2">Math models and such chuchu</p>
+          <h1 class="u-text u-text-white u-title u-text-1">Mi Amoro&nbsp </h1>
+	
+ <div class="u-container-layout u-container-layout-1">
+	<h2 class="u-custom-font u-font-pt-sans u-text u-text-white u-text-1"> Visual Welfare Radar for MOROS Overseas</h2>
+	
         </div>
       </div>
     </section>
@@ -68,7 +71,7 @@
             <div class="u-container-style u-layout-cell u-left-cell u-palette-2-base u-size-20 u-layout-cell-1">
               <div class="u-container-layout u-container-layout-1">
                 <h2 class="u-custom-font u-font-pt-sans u-text u-text-white u-text-1">About Us</h2>
-                <div class="u-border-20 u-border-palette-1-base u-line u-line-horizontal u-line-1"></div>
+                <p class="u-text u-text-palette-1-base u-text-2">something eme eme</p>
               </div>
             </div>
             <div class="u-container-style u-layout-cell u-palette-5-light-2 u-right-cell u-size-40 u-layout-cell-2">
@@ -172,7 +175,7 @@
               <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-container-layout-1">
                 <img src="images/bg3.png" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="490" data-image-height="339">
                 <h2 class="u-custom-font u-font-pt-sans u-text u-text-1">Mi Amoro Graphs</h2>
-                <p class="u-text u-text-2"> Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="u-text u-text-2"> shetIpsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
               </div>
             </div>
             <div class="u-container-style u-image u-layout-cell u-right-cell u-size-40 u-image-2" data-image-width="612" data-image-height="409">
@@ -186,14 +189,28 @@
       <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
         <div class="u-layout">
           <div class="u-layout-row">
-            <div class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" data-image-width="300" data-image-height="168">
-              <div class="u-container-layout"></div>
-            </div>
-            <div class="u-container-style u-image u-layout-cell u-size-20 u-image-2" data-image-width="300" data-image-height="168">
-              <div class="u-container-layout"></div>
-            </div>
-            <div class="u-container-style u-image u-layout-cell u-right-cell u-size-20 u-image-3" data-image-width="300" data-image-height="168">
-              <div class="u-container-layout"></div>
+            <div class="u-container-style u-image u-layout-cell u-left-cell u-size-20 u-image-1" data-image-width="400" data-image-height="168">
+		<table>
+		<tr>
+      			<td></td><th>Correlation Results </th><td></td>
+  		</tr>
+		<?php
+		$conn = mysqli_connect('localhost','root','','python_db');
+		$query = 'SELECT Pearsons,Spearmans,Kendalltau FROM correlationtable';
+		$result = $conn->query($query);
+		if ($result ->num_rows>0){
+			while($row =$result-> fetch_assoc()){
+				echo "<tr><td>" . $row["Pearsons"] . "</td><td>" . $row["Spearmans"] . "</td><td>" . $row["Kendalltau"] . "</td></tr>";
+			}
+		}
+		else{ 
+			echo "No Results";
+		}
+		$conn->close();
+		?>
+		
+		</table>
+              
             </div>
           </div>
         </div>
@@ -205,12 +222,18 @@
           <div class="u-layout-row">
             <div class="u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-1" data-image-width="300" data-image-height="168">
               <div class="u-container-layout"></div>
+		
             </div>
+	
+	
             <div class="u-container-style u-layout-cell u-palette-2-base u-right-cell u-size-30 u-layout-cell-2">
+		<div class="u-container-style u-layout-cell u-palette-2-base u-right-cell u-size-30 u-layout-cell-2">
+		
+
               <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-container-layout-2">
-                <img src="images/bg3.png" alt="" class="u-image u-image-contain u-image-default u-image-2" data-image-width="490" data-image-height="339">
+                <img src="images/bg3.png" alt="" class="u-image u-image-contain u-image-default u-image-2" data-image-width="190" data-image-height="139">
                 <h2 class="u-custom-font u-font-pt-sans u-text u-text-1">Mi Amoro</h2>
-                <p class="u-text u-text-2"> Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p class="u-text u-text-2"> ssssssLorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <div class="u-border-20 u-border-white u-line u-line-horizontal u-line-1"></div>
               </div>
             </div>
@@ -242,14 +265,14 @@
     
     
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
+      
+        <span>Mi-Amoro Thesis Group</span>
       </a>
       <p class="u-text">
-        <span>created with</span>
+        <span>by </span>
       </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
+      
+        <span>Malayan Colleges Laguna</span>
       </a>. 
     </section>
   </body>
